@@ -1,169 +1,95 @@
-<<<<<<< HEAD
-\# SOC Security Log Analysis
+# SOC Security Log Analysis
 
+A beginner-friendly cybersecurity project that analyzes synthetic authentication logs to identify repeated failed login attempts and summarize potentially suspicious activity.
 
+## Project Overview
 
-A beginner cybersecurity project that analyzes synthetic authentication logs using Python and identifies repeated failed login attempts.
+This project simulates a basic Security Operations Center (SOC) log-triage task. A Python script processes authentication records, counts successful and failed logins, and highlights source IP addresses and user accounts with repeated failures.
 
+**Note:** This project uses synthetic training data. It does not monitor live systems or prove that an attack occurred.
 
+## Objectives
 
-\## Project Overview
+* Analyze authentication log records using Python.
+* Count successful and failed login attempts.
+* Identify IP addresses with three or more failed attempts.
+* Identify user accounts with three or more failed attempts.
+* Generate a readable analysis report.
 
+## Tools and Technologies
 
+* Python
+* Git and GitHub
+* CSV-style log processing
+* Windows Command Prompt
 
-This project demonstrates basic security log analysis for a Security Operations Center (SOC) learning environment. The script reads authentication records, counts successful and failed logins, identifies source IP addresses and usernames with repeated failures, and generates a text report.
-
-
-
-\## Objectives
-
-
-
-\* Practice analyzing authentication logs.
-
-\* Identify repeated failed login attempts.
-
-\* Summarize security events using Python.
-
-\* Generate a report to support further investigation.
-
-
-
-\## Technologies Used
-
-
-
-\* Python
-
-\* CSV parsing
-
-\* `collections.Counter`
-
-\* Windows Command Prompt
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 SOC-Security-Log-Analysis/
-
-├── analyze\_logs.py
-
-├── sample\_logs/
-
+├── analyze_logs.py
+├── README.md
+├── sample_logs/
 │   └── auth.log
-
 ├── reports/
-
-│   └── analysis\_report.txt
-
-└── README.md
-
+│   └── analysis_report.txt
+└── screenshots/
 ```
 
+## How to Run
 
-
-\## How to Run
-
-
-
-1\. Install Python 3.
-
-2\. Open Command Prompt in the project directory.
-
-3\. Run the analysis script:
-
-
+1. Install Python 3 if it is not already installed.
+2. Clone or download this repository.
+3. Open Command Prompt in the project directory.
+4. Run the script:
 
 ```bash
-
-py analyze\_logs.py
-
+py analyze_logs.py
 ```
 
+The analysis report is saved to `reports/analysis_report.txt`.
 
-
-The generated report is saved to `reports/analysis\_report.txt`.
-
-
-
-\## Sample Results
-
-
+## Sample Results
 
 The current synthetic dataset contains eight records.
 
+| Metric                  | Result |
+| ----------------------- | -----: |
+| Total records processed |      8 |
+| Successful logins       |      2 |
+| Failed logins           |      6 |
+| Invalid records         |      0 |
 
+The script identifies two source IP addresses and two user accounts with at least three failed login attempts in this sample dataset.
 
-\* Records processed: 8
+Repeated failures may warrant further investigation, but they do not by themselves confirm malicious activity.
 
-\* Successful logins: 2
+## Skills Practiced
 
-\* Failed logins: 6
+* Basic Python scripting
+* Authentication log analysis
+* Failed-login pattern identification
+* Security event triage fundamentals
+* Report generation
+* Git and GitHub version control
 
-\* Invalid records: 0
+## Limitations
 
-\* Source IPs with at least three failed attempts: 2
+* Uses synthetic training records, not live security logs.
+* Applies a simple threshold of three or more failed attempts.
+* Does not perform real-time monitoring, threat attribution, or automated incident response.
 
-\* Usernames with at least three failed attempts: 2
+## Future Improvements
 
+* Add timestamps and time-window analysis.
+* Support larger log files and malformed records.
+* Add configurable detection thresholds.
+* Create visual summaries of login activity.
+* Practice investigating events using a SIEM platform such as Splunk.
 
+## Author
 
-These results describe the supplied sample data only. They are not findings from a live system.
+**Lakshman Prasad**
+Aspiring SOC Analyst | Cybersecurity
 
-
-
-\## Investigation Notes
-
-
-
-Repeated authentication failures can warrant further investigation. However, this simple threshold-based script does not establish whether activity is malicious and does not perform real-time monitoring.
-
-
-
-\## Limitations
-
-
-
-\* Uses synthetic sample records rather than live security events.
-
-\* Uses a fixed threshold of three failed attempts.
-
-\* Does not correlate events across time windows.
-
-\* Does not automatically block IP addresses or respond to incidents.
-
-
-
-\## Future Improvements
-
-
-
-\* Add automated tests and malformed-record test cases.
-
-\* Support configurable thresholds.
-
-\* Add time-window-based detection.
-
-\* Explore analysis of exported Windows Security event logs.
-
-\* Improve report formatting and visualization.
-
-
-
-\## Disclaimer
-
-
-
-This project is intended for educational purposes and uses synthetic training data.
-
-
-
-=======
-# SOC-Security-Log-Analysis
-Beginner SOC project for analyzing authentication logs with Python
->>>>>>> ca9abaa53b77f15c096d69d9abd300d0566094b9
+GitHub: https://github.com/vtu23484-cmd
