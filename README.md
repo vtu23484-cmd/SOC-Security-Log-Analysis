@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# SOC Security Log Analysis
 
 
@@ -162,3 +163,7 @@ This project is intended for educational purposes and uses synthetic training da
 
 
 
+=======
+# SOC-Security-Log-Analysis
+Beginner SOC project for analyzing authentication logs with Python
+>>>>>>> ca9abaa53b77f15c096d69d9abd300d0566094b9
