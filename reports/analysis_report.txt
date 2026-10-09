@@ -1,0 +1,19 @@
+SOC SECURITY LOG ANALYSIS REPORT
+==================================
+Dataset: Synthetic training records
+Total records processed: 8
+Successful logins: 2
+Failed logins: 6
+Invalid records: 0
+
+Source IPs with at least 3 failed logins:
+  192.168.1.10: 3 failed attempts
+  203.0.113.25: 3 failed attempts
+
+User accounts with at least 3 failed logins:
+  admin: 3 failed attempts
+  alice: 3 failed attempts
+
+Interpretation:
+Repeated failures warrant investigation but do not prove an attack.
+This report is based on synthetic data, not live security events.
